@@ -1,3 +1,9 @@
+## PreRequisites
+	Kubernetes Cluster (Minikube / Kind / Cloud-based cluster)
+	kubectl (configured to access your cluster)
+	Helm (v3 or later)
+	Git
+	
 ## GitOps Deployment using Argo CD
 
 Repository Structure :
@@ -170,17 +176,14 @@ kubectl --namespace <namespace> get secrets prometheus-grafana -o jsonpath="{.da
 $pass = kubectl -n default get secret prometheus-grafana -o jsonpath="{.data.admin-password}"
 [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($pass))
 ```
-You can generate Json for creating the dashboards
-
-How to Import :
-- Go to Grafana
-- Click ➝ **+ → Import**
-- Paste JSON
-- Select **Prometheus datasource**
-- Click **Import**
+Create the DashBoard:
+```
+k apply -f db-config.yaml
+```
 
 <img width="1896" height="1001" alt="image" src="https://github.com/user-attachments/assets/1523e4c0-ffbf-42f5-8e46-2354c1217e93" />
 
+Note : Ensure Grafana Sidecar is enabled 
 
 ## Implement AlertManager 
 
