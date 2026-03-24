@@ -24,7 +24,7 @@ gitops_demo/
 ```
 
 ### Steps
-1. Clone this repo :
+1. Clone this repo : https://github.com/MeghabMB/gitops_demo.git
 2. Apply the root-app.yaml using kubectl:
    ```
    kubectl apply -f root-app.yaml
