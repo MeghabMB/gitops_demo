@@ -161,6 +161,7 @@ In targets,
 Now in Query tab ,
 	Run the Query : argocd_app_info
 	You will get the metrics
+
 ## Visualize metrics in Grafana
 To login to Grafana , we need password :
 
